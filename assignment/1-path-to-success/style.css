@@ -184,6 +184,10 @@ h4 {
   --White: #ffffff;
 }
 
+/* line height to all p tags */
+p {
+  line-height: 1.4;
+}
 /* GLOBAL STYLES (mobile first/small) */
 body {
   background-color: var(--Lavender);
@@ -264,7 +268,59 @@ header .header-text {
   width: 100px;
   margin-bottom: 0.5rem;
 }
-#services p {
-  /* font-size: 1.25rem; */
-  line-height: 1.4;
+
+/* why section */
+#why {
+  background: #d9526f;
+  padding: 1rem;
+}
+#why h2 {
+  color: var(--White);
+  margin-bottom: 1rem;
+}
+#why div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+#why p {
+  border-radius: 1rem;
+  padding: 2rem 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+#why p:nth-child(1) {
+  background: var(--Teal);
+}
+#why p:nth-child(2) {
+  background: var(--Lavender);
+}
+#why p:nth-child(3) {
+  background: var(--Yellow);
+}
+#why p:nth-child(4) {
+  background: var(--White);
+}
+/* cta section */
+#cta {
+  background: #d9526f;
+  padding: 1rem;
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#cta button {
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  box-shadow: 7px 7px 5px 0px #000;
+  cursor: pointer;
+  width: 90%;
+  margin: auto auto;
 }
