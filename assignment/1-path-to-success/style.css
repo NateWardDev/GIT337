@@ -324,3 +324,17 @@ header .header-text {
   width: 90%;
   margin: auto auto;
 }
+
+/* footer */
+footer {
+  padding: 4rem 1rem;
+  color: var(--White);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+footer a {
+  color: var(--White);
+}
