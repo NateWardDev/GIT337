@@ -183,3 +183,18 @@ h4 {
   --Dark-gray: #1e1e1e;
   --White: #ffffff;
 }
+
+/* GLOBAL STYLES (mobile first/small) */
+body {
+  background-color: var(--Lavender);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+header,
+section,
+footer {
+  max-width: 450px;
+  background: var(--Purple);
+}
