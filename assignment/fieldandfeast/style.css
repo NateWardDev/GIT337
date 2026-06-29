@@ -1,0 +1,404 @@
+/* CSS BY Nate Ward */
+/* IMPORTED FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* CSS RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* end of CSS RESET */
+
+/* ROOT VARIABLES */
+:root {
+  --midnight-blue: #1f2a44;
+  --olive-green: #76885b;
+  --champagne-gold: #e5c185;
+  --linen: #f8f4ec;
+  --dark-charcoal: #2b2b2b;
+  --soft-white: #faf9f6;
+  --font-primary: "Playfair Display", serif;
+  --box-shadow: 0px 4px 8px #00000070;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+/* consistant padding/ margins */
+#about,
+#offerings,
+#gallery {
+  padding: 0.5rem 2rem;
+}
+hr {
+  margin: 1rem 2rem 1.5rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  height: 2px;
+  background: var(--champagne-gold);
+}
+/* general font sizes */
+#about h2,
+#offerings h2,
+#gallery h2 {
+  font-size: 2rem;
+}
+#about h3,
+#offerings h3,
+#gallery h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#about p,
+#offerings p,
+#gallery p,
+#about ul,
+#offerings ul,
+#gallery ul {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#about figcaption,
+#offerings figcaption,
+#gallery figcaption {
+  font-size: 1rem;
+  font-style: italic;
+}
+/* end of general font sizes */
+
+/* header section */
+header {
+  margin-bottom: 3.5rem;
+}
+header .logo {
+  background: var(--midnight-blue);
+  color: var(--soft-white);
+  text-align: center;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 25dvh;
+}
+
+header .logo h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+header .logo p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+header nav {
+  padding: 1rem;
+  background: var(--champagne-gold);
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  font-weight: bold;
+  color: var(--midnight-blue);
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--midnight-blue);
+  font-size: 1.25rem;
+}
+/* end of header section */
+
+/* welcome section */
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* end of welcome section */
+/* Offerings Section */
+#offerings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.articles-wrapper {
+  display: grid;
+  gap: 1rem;
+}
+#offerings article {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: var(--olive-green);
+  color: var(--soft-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+#offerings article ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+/* end of Offerings Section */
+
+/* Gallery Section */
+#gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.gallery-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.gallery-wrapper figure {
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.gallery-wrapper figure img {
+  width: 100%;
+}
+.gallery-wrapper figure figcaption {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+#gallery a {
+  background: var(--olive-green);
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--soft-white);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* end of Gallery Section */
+
+/* footer styles */
+footer {
+  padding: 5rem 1rem;
+  background: var(--midnight-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+  color: var(--soft-white);
+}
+footer address {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer a {
+  color: var(--champagne-gold);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* end of footer styles */
+
+/* MEDIA QUERY (medium) */
+@media (min-width: 600px) {
+  header .logo h1 {
+    font-size: 4rem;
+  }
+  .gallery-wrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+  .gallery-wrapper figure {
+    width: calc(50% - 1rem);
+  }
+  .articles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  /* First article */
+  .articles-wrapper article:nth-of-type(1) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  /* Second article */
+  .articles-wrapper article:nth-of-type(2) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  /* Third article */
+  .articles-wrapper article:nth-of-type(3) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+}
+
+/* MEDIA QUERY (large) */
+@media (min-width: 900px) {
+  .gallery-wrapper figure {
+    width: calc(33% - 1rem);
+  }
+  #about,
+  #offerings,
+  #gallery {
+    padding: 0.5rem 3rem;
+  }
+}
+
+/* MEDIA QUERY (xl) */
+@media (min-width: 1200px) {
+  #about,
+  #offerings,
+  #gallery {
+    max-width: 1200px;
+    margin: auto auto;
+  }
+  hr {
+    max-width: 1100px;
+    margin: 1rem auto 1.5rem auto;
+  }
+  .gallery-wrapper figure {
+    width: calc(20% - 1rem);
+  }
+}
